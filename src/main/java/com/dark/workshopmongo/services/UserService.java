@@ -17,4 +17,10 @@ public class UserService {
 	public List<User> findAll(){
 		return repo.findAll();
 	}
+	
+	public User findById(String id) {
+		User user = repo.findById(id).orElse(null);
+		return user;
+		
+	}
 }
